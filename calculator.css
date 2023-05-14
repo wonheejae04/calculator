@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+#input,
+#output {
+    padding: 0.5em;
+}
+
+#output {
+    text-align: right;
+    background-color: rgb(210, 229, 244);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h6 {
+    margin: 0
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size:30px;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    color: #0a1e29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: none;
+}
+
+.container {
+    overflow: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 1fr 250px;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSide {
+    background-color: rgb(252, 252, 254);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.rightSide h4 {
+    padding: 0.5em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .rightSide {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.historyContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font: inherit;
+    color: inherit;
+    background-color: rgb(210, 229, 244);
+    border: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-grow: 1; 
+}
+
+.buttons button {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 80px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+.numberButton {
+    background-color: rgba(210, 229, 244)
+}
+
+.blueButton {
+    background-color: rgb(194, 232, 255)
+}
+
+.greyButton {
+    background-color: rgba(239, 244, 248)
+}
+
+.mainButton {
+    background-color: rgba(229, 222, 255)
+}
+
+.historyItem {
+    border-bottom: 1px solid rgb(252, 252, 254);
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #000;
+    font-size: 60%;
+}
+
+.historyItem>*:first-child {
+    padding-top: 0.5em;
+}
+
+.historyItem>*:last-child {
+    text-align: right;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(252, 252, 254);
+    transition: background-color 0.3s ease;
+}
